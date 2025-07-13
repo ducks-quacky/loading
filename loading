@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      background: #0d0d0d;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      color: white;
+      font-family: sans-serif;
+    }
+    .loader {
+      width: 80%;
+      height: 6px;
+      background: #222;
+      border-radius: 5px;
+      overflow: hidden;
+      box-shadow: 0 0 10px #111;
+    }
+    .bar {
+      height: 100%;
+      width: 0%;
+      background: #ffffff;
+      transition: width 1s ease;
+    }
+  </style>
+</head>
+<body>
+  <div class="loader"><div class="bar" id="bar"></div></div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const bar = document.getElementById("bar");
+      requestAnimationFrame(() => {
+        bar.style.width = "100%";
+      });
+
+      setTimeout(() => {
+        window.location.href = "https://stuxfian.com";
+      }, 1000);
+    });
+  </script>
+</body>
+</html>
